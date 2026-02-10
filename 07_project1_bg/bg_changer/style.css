@@ -1,0 +1,54 @@
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Default background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    background: #f4f4f4;
+    transition: background 0.5s ease;
+}
+
+/* Center content */
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Buttons */
+.buttons label {
+    padding: 12px 20px;
+    margin: 8px;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.buttons label:hover {
+    opacity: 0.8;
+}
+
+/* Background changes */
+#red:checked ~ .container {
+    background: #ff4d4d;
+}
+
+#green:checked ~ .container {
+    background: #4CAF50;
+}
+
+#blue:checked ~ .container {
+    background: #4da6ff;
+}
+
+#default:checked ~ .container {
+    background: #f4f4f4;
+}
