@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML elements</title>
+</head>
+<body style="background-color: lightcoral;">
+    <h1>Amazing images</h1>
+    <div>
+    <ul id="images">
+        <li><img id="animal" src="https://rukminim2.flixcart.com/image/480/480/j1861zk0/poster/4/n/4/large-szpp294-deer-baby-cute-animal-poster-original-imaefzbj53p5jatd.jpeg?q=90" alt="Animal"></li>
+        <li><img id="nature" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1z3WO2y5h7YkHljxIsvwuOxP21OE_8tnedA&s" alt="Nature"></li>
+        <li><img id="architecture" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRylG2Jz0jjZwPZRNiEi7TJWd8O5gQXLO50IcY_CwZKVw&s" alt="Architecture"></li>
+        <li><a id="link" href="https://www.google.com">Google</a></li>
+    </ul>
+</body>
+<script>
+// document.getElementById("animal").onclick=function(){
+//     alert("This is an animal image");
+// }
+//attachevent()
+//jqQuery - on
+//type,timestamp, target, currentTarget, eventPhase, bubbles, cancelable, defaultPrevented, etc
+//clientx,clienty,screenx,screeny, pagex,pagey, offsetx,offsety
+//altkey,ctrlkey,shiftkey,keyCode,key, etc
+// document.getElementById("images").addEventListener("click",function(e){
+
+//    console.log("Click inside the ul")
+// },false)
+// document.getElementById("animal").addEventListener("click",function(e){
+
+//    console.log("Click inside the animal image")
+//    e.stopPropagation();
+// },false)
+
+// document.getElementById('link').addEventListener("click",function(e){
+//     e.preventDefault();
+//     e.stopPropagation();
+//     console.log("Google clicked")
+// },false)
+
+document.querySelector("#images").addEventListener("click",function(e){
+    console.log(e.target.tagName);
+    if(e.target.tagName=="IMG"){
+        console.log(e.target.id)
+ let removeIt=e.target.parentNode;
+    removeIt.remove();
+   
+    }
+   
+ },false)
+
+</script>
+</html>
