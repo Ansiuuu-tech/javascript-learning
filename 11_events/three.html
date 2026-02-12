@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:aqua">
+    <h1>Hello Javascript</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const saydate=function(String){
+        console.log(String,Date.now())
+    }
+ let intid;
+    document.querySelector('#start').addEventListener("click",function(){
+            intid=setInterval(saydate,1000,"Anshu")
+        console.log("Interval started")
+      setInterval(intid)
+    })
+    document.querySelector('#stop').addEventListener("click",function(){
+clearInterval(intid);
+        console.log("Interval stopped")
+    })
+</script>
+</html>

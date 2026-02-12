@@ -1,0 +1,56 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center everything */
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    transition: background-color 0.5s ease; /* smooth color change */
+}
+
+/* Heading style */
+h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+}
+
+/* Button container spacing */
+button {
+    padding: 12px 25px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Start button */
+#start {
+    background-color: #28a745;
+    color: white;
+}
+
+#start:hover {
+    background-color: #218838;
+}
+
+/* Stop button */
+#stop {
+    background-color: #dc3545;
+    color: white;
+}
+
+#stop:hover {
+    background-color: #c82333;
+}
