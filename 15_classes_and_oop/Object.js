@@ -1,0 +1,22 @@
+function multiplyby5(num) {
+    return num * 5;
+}   
+multiplyby5.power=2;
+console.log(multiplyby5(10));
+console.log(multiplyby5.power);
+console.log(multiplyby5.prototype);
+
+function createUser(username,score){
+    this.username=username
+    this.score=score
+}
+createUser.prototype.increment=function(){
+    this.score++;
+}
+createUser.prototype.printMe=function(){
+    console.log("Price is",this.score);
+}
+const chai=new  createUser('Chai',20)
+const tea=createUser('Tea',30)
+
+chai.printMe();
