@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color: white;">
+    <h1>Closure</h1>
+    <button id="Orange">orange</button>
+    <button id="Green">green</button>
+    
+</body>
+<script>
+//     function init() {
+//   let name = "Mozilla"; 
+//   function displayName() {
+//     console.log(name); 
+//      }
+//   displayName();
+// }
+// init();
+
+// function outer(){
+//     let username='Anshu'
+//     // console.log("outer",secret)
+//     function inner(){
+//         let secret="my123"
+//         console.log("inner",username)
+//     }
+//     function inner2(){
+//         console.log("inner2",username)
+//         console.log("inner2",secret) // error
+//     }
+
+//     inner()
+//     inner2()
+// }
+// outer()
+// console.log("Too outer",username)
+
+
+// function makeFunc() {
+//   const name = "Mozilla";
+//   function displayName() {
+//     console.log(name);
+//   }
+//   return displayName;
+// }
+
+// const myFunc = makeFunc();
+// myFunc();
+
+
+</script>
+
+<script>
+// document.getElementById("Orange").addEventListener("click", function(){
+//     document.body.style.background="orange"
+// })
+// document.getElementById("Green").addEventListener("click", function(){
+//     document.body.style.background="green"
+// })
+
+function clickHandler(color){
+//   document.body.style.background=color
+
+return function(){
+    document.body.style.background=color
+}
+}
+
+document.getElementById("Orange").addEventListener("click", clickHandler("orange"))
+document.getElementById("Green").addEventListener("click", clickHandler("green"))
+</script>
+</html>
