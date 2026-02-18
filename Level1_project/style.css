@@ -1,0 +1,79 @@
+/* Reset default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #4e73df, #1cc88a);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* Heading */
+h1 {
+    margin-bottom: 20px;
+    color: white;
+    letter-spacing: 2px;
+}
+
+/* Game board */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+}
+
+/* Each cell */
+.cell {
+    background-color: white;
+    border-radius: 8px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+/* Hover effect */
+.cell:hover {
+    background-color: #f8f9fc;
+    transform: scale(1.05);
+}
+
+/* Status text */
+#status {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    min-height: 24px;
+}
+
+/* Restart button */
+#restart {
+    margin-top: 15px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    background-color: #f6c23e;
+    color: #333;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+#restart:hover {
+    background-color: #e0a800;
+    transform: scale(1.05);
+}
